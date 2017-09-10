@@ -32,8 +32,8 @@ export default class Disk extends Component {
       <div>
         <PageHeader className='text-center'>Yandex.Disk</PageHeader>
         <Address path={this.props.path} history={this.props.history} />
-        <Directory items={this.props.items} />
         <Logout onLogout={this.props.onLogout} />
+        <Directory items={this.props.items} />
       </div>
     )
   }
