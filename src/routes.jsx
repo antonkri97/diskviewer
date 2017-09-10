@@ -7,6 +7,6 @@ import Disk from './containers/DiskPage';
 export default (
   <Route component={App} path='/'>
     <IndexRoute component={Auth} />
-    <Route path='/disk(/:path)' component={Disk} />
+    <Route path='/disk(/**)' component={Disk} />
   </Route>
 );

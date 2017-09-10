@@ -4,6 +4,8 @@ import {
   DIRECTORY_REQUEST_FAIL
 } from '../constants';
 
+import { push } from 'react-router-redux';
+
 const directoryRequestStart = () => ({
   type: DIRECTORY_REQUEST_START,
 });
@@ -21,7 +23,12 @@ const directoryRequestFail = (error) => ({
 export const getResources = (path) => async (dispatch, getState) => {
   const { accessToken } = getState().auth;
 
-  if (!accessToken) return;
+  console.log(`current path ______ ${path}`);
+
+  if (!accessToken) {
+    dispatch(push('/'));
+    return;
+  }
 
   dispatch(directoryRequestStart());
 
@@ -35,6 +42,7 @@ export const getResources = (path) => async (dispatch, getState) => {
 
   if (req.ok) {
     dispatch(directoryRequestSuccessfull(await req.json()))
+    dispatch(push(`/disk${path.substr(5)}`))
   } else {
     dispatch(directoryRequestFail(req.statusText))
   }

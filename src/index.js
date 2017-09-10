@@ -10,11 +10,7 @@ import { Provider } from 'react-redux';
 import logger from 'redux-logger';
 import thunk from 'redux-thunk';
 
-
-
-const routerMiddle = routerMiddleware(browserHistory)
-
-const store = createStore(reducers, applyMiddleware(thunk, routerMiddle, logger));
+const store = createStore(reducers, applyMiddleware(thunk, routerMiddleware(browserHistory), logger));
 
 const history = syncHistoryWithStore(browserHistory, store)
 
