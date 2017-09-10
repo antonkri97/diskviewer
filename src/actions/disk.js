@@ -2,8 +2,7 @@ import {
   DIRECTORY_REQUEST_START,
   DIRECTORY_REQUEST_SUCCESSFULL,
   DIRECTORY_REQUEST_FAIL
-} from '../constants';
-
+}               from '../constants';
 import { push } from 'react-router-redux';
 
 const directoryRequestStart = () => ({

@@ -1,14 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import registerServiceWorker from './registerServiceWorker';
-import { browserHistory, Router } from 'react-router';
+import React                                      from 'react';
+import ReactDOM                                   from 'react-dom';
+import registerServiceWorker                      from './registerServiceWorker';
+import { browserHistory, Router }                 from 'react-router';
 import { syncHistoryWithStore, routerMiddleware } from 'react-router-redux'
-import routes from './routes';
-import { createStore, applyMiddleware } from 'redux';
-import reducers from './reducers';
-import { Provider } from 'react-redux';
-import logger from 'redux-logger';
-import thunk from 'redux-thunk';
+import routes                                     from './routes';
+import { createStore, applyMiddleware }           from 'redux';
+import reducers                                   from './reducers';
+import { Provider }                               from 'react-redux';
+import logger                                     from 'redux-logger';
+import thunk                                      from 'redux-thunk';
 
 const store = createStore(reducers, applyMiddleware(thunk, routerMiddleware(browserHistory), logger));
 

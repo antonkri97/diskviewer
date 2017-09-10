@@ -1,7 +1,7 @@
-import React from 'react';
+import React        from 'react';
 import { Row, Col } from 'react-bootstrap';
-import PropTypes from 'prop-types';
-import Item from './Item';
+import PropTypes    from 'prop-types';
+import Item         from './Item';
 
 const Directory = ({ items }) => {
   if (items.length === 0) {

@@ -1,5 +1,5 @@
 import { SAVE_USER_TOKEN, CLEAR_USER_TOKEN } from '../constants';
-import { push } from 'react-router-redux'
+import { push }                              from 'react-router-redux'
 
 const saveUserData = (accessToken, refreshToken) => ({
   type: SAVE_USER_TOKEN,

@@ -1,8 +1,8 @@
-import { connect } from 'react-redux';
-import Disk from '../components/Disk';
-import { getResources } from '../actions/disk';
+import { connect }       from 'react-redux';
+import Disk              from '../components/Disk';
+import { getResources }  from '../actions/disk';
 import { clearUserData } from '../actions/auth';
-import { push } from 'react-router-redux';
+import { push }          from 'react-router-redux';
 
 const mapStateToProps = (state) => ({
   totalSize: 1000,

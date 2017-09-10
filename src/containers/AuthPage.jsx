@@ -1,6 +1,6 @@
-import Auth from '../components/Auth';
+import Auth        from '../components/Auth';
 import { connect } from 'react-redux';
-import auth from '../actions/auth';
+import auth        from '../actions/auth';
 
 const clientId = 'da072d0fdb6e4b3990e43ab14c956d5b';
 

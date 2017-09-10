@@ -1,6 +1,6 @@
-import React from 'react';
+import React                from 'react';
 import { Row, Col, Button } from 'react-bootstrap';
-import PropTypes from 'prop-types';
+import PropTypes            from 'prop-types';
 
 const Logout = ({ onLogout }) => (
   <Row>

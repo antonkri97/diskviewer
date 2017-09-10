@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component }        from 'react';
 import { Row, Col, Panel, Button } from 'react-bootstrap';
-import PropTypes from 'prop-types';
+import PropTypes                   from 'prop-types';
 
 export default class Auth extends Component {
   static propTypes = {

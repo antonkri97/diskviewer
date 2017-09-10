@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import Directory from './Directory';
-import { PageHeader } from 'react-bootstrap';
-import Address from './Address';
-import Logout from './Logout';
+import PropTypes            from 'prop-types';
+import Directory            from './Directory';
+import { PageHeader }       from 'react-bootstrap';
+import Address              from './Address';
+import Logout               from './Logout';
 
 export default class Disk extends Component {
 
