@@ -39,7 +39,7 @@ const Size = styled.span`
 `
 
 const Item = ({ item }) => (
-  <Wrapper onClick={item.onGetResources}>
+  <Wrapper onClick={() => item.type === 'dir' ? item.onGetResources() : null}>
     <Icon type={item.type} preview={item.preview} />
     <Title>
       {item.name}

@@ -45,6 +45,7 @@ export const getResources = (path) => async (dispatch, getState) => {
     dispatch(push(`/disk${path.substr(5)}`))
   } else {
     dispatch(directoryRequestFail(req.statusText))
+    dispatch(getResources('/'))
   }
 
 }
