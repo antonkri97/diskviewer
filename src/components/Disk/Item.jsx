@@ -33,12 +33,24 @@ const Title = styled.span`
   align-self: center;
 `;
 
+const Size = styled.span`
+  align-self: center;
+  color: red;
+`
+
 const Item = ({ item }) => (
   <Wrapper onClick={item.onGetResources}>
     <Icon type={item.type} preview={item.preview} />
     <Title>
       {item.name}
     </Title>
+    <Size>
+      {
+        item.size ?
+          `Размер файла: ${(item.size / (1024 * 1024)).toFixed(2)} Мб` :
+          ''
+      }
+    </Size>
   </Wrapper>
 );
 
@@ -50,6 +62,7 @@ Item.propTypes = {
   path: PropTypes.string,
   type: PropTypes.string,
   onItemSelect: PropTypes.func,
+  size: PropTypes.number
 }
 
 export default Item;

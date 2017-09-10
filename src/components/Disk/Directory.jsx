@@ -29,7 +29,8 @@ Directory.propTypes = {
       name: PropTypes.string,
       preview: PropTypes.string,
       path: PropTypes.string,
-      type: PropTypes.string
+      type: PropTypes.string,
+      size: PropTypes.number
     })
   )
 };
