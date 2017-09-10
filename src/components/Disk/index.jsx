@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Directory from './Directory';
 import { PageHeader } from 'react-bootstrap';
 import Address from './Address';
+import Logout from './Logout';
 
 export default class Disk extends Component {
 
@@ -32,6 +33,7 @@ export default class Disk extends Component {
         <PageHeader className='text-center'>Yandex.Disk</PageHeader>
         <Address path={this.props.path} history={this.props.history} />
         <Directory items={this.props.items} />
+        <Logout onLogout={this.props.onLogout} />
       </div>
     )
   }

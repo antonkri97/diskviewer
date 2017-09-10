@@ -1,6 +1,8 @@
 import { connect } from 'react-redux';
 import Disk from '../components/Disk';
 import { getResources } from '../actions/disk';
+import { clearUserData } from '../actions/auth';
+import { push } from 'react-router-redux';
 
 const mapStateToProps = (state) => ({
   totalSize: 1000,
@@ -10,7 +12,11 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  onInitialLoad: (path) => dispatch(getResources(path))
+  onInitialLoad: (path) => dispatch(getResources(path)),
+  onLogout: () => {
+    dispatch(clearUserData())
+    dispatch(push('/'))
+  }
 });
 
 const mergeProps = (stateProps, dispatchProps, ownProps) => {

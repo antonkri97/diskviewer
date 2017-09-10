@@ -1,4 +1,4 @@
-import { SAVE_USER_TOKEN } from '../constants';
+import { SAVE_USER_TOKEN, CLEAR_USER_TOKEN } from '../constants';
 
 const initialState = {
   accessToken: null,
@@ -6,12 +6,15 @@ const initialState = {
 };
 
 export default (state = initialState, action) => {
-  if (action.type === SAVE_USER_TOKEN) {
-    return {
-      accessToken: action.accessToken,
-      refreshToken: action.refreshToken
-    };
+  switch (action.type) {
+    case SAVE_USER_TOKEN:
+      return {
+        accessToken: action.accessToken,
+        refreshToken: action.refreshToken
+      }
+    case CLEAR_USER_TOKEN:
+      return initialState;
+    default:
+      return state
   }
-
-  return state;
 }
