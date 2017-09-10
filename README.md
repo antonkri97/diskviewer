@@ -6,7 +6,7 @@
 * Redux
 * React-Router 3.0
 * React-Router-Redux
-* Redux-thunk
+* Redux-Thunk
 * React-Bootstrap
 * Styled-Components
 
@@ -16,4 +16,4 @@
 * yarn / npm install
 * yarn / npm start
 
-__Проверьте, что проект запущен на 3000 порту!__
+__Важно! Проект обязательно должен быть запущен на 3000 порту!__
