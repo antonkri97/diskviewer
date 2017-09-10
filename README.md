@@ -13,6 +13,7 @@
 ## Запуск приложения
 
 * git clone https://github.com/antonkri97/diskviewer
+* cd diskviewer
 * yarn / npm install
 * yarn / npm start
 
