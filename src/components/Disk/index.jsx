@@ -10,7 +10,6 @@ export default class Disk extends Component {
   static propTypes = {
     onInitialLoad: PropTypes.func,
     items: PropTypes.array,
-    totalSize: PropTypes.number,
     path: PropTypes.arrayOf(
       PropTypes.string
     ),

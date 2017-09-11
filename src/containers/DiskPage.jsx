@@ -5,8 +5,6 @@ import { clearUserData } from '../actions/auth';
 import { push }          from 'react-router-redux';
 
 const mapStateToProps = (state) => ({
-  totalSize: 1000,
-  available: 1000,
   items: state.disk.resources !== null ? state.disk.resources._embedded.items : [],
   path: state.routing.locationBeforeTransitions.pathname.substr(1).split('/')
 });
